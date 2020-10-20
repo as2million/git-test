@@ -47,6 +47,7 @@ git merge 分支名 => 合併分支
 
 
 
+*push之前一定要先pull 
 
 *上傳檔案到gitHub
     git add 檔名 -->  git commit -m "說明文字" --> git push
@@ -82,7 +83,7 @@ git merge 分支名 => 合併分支
     git branch
 
 *新增分支
-    git branch 分支名
+    git branch 分支名 => git checkout到新分支 => 新增檔案並上傳檔案 =>  執行 git push --set-upstream origin 新分支名 
 
 *改名分支
     git branch -m 原分支名 修改分支名
