@@ -1,0 +1,98 @@
+git config --global user.name "名稱" => 設定本機名稱
+git config --global user.email "信箱" => 設定本機信箱
+git config --list => 查看本機資料
+
+cd 目錄 => 移動到該目錄
+cd .. => 回上頁
+
+echo "內容" > 檔名.副檔名 => 創建檔案
+
+git status => 查看git狀態
+
+git add 檔名 => 加入檔案到暫存區(Staging Area)
+git add *.副檔名 => 加入所有該副檔名的檔案到暫存區
+git add all => 加入所有檔案到暫存區
+
+git commit -m "說明文字" => 保存檔案至儲存庫(Repository) -m表示message用於說明
+
+git log => 查看所有commit過程
+git log --oneline => 查詢所有commit
+git log --oneline --author="作者" => 查詢特定作者的commit
+git log --oneline --grep="commit訊息" => 查詢特定commit訊息的commit
+git log --oneline --since="時間1(a.m./p.m.)" --until="時間2(a.m./p.m.)" => 查詢當天特定時段的commit
+git log --oneline --since="時間1(a.m./p.m.)" --until="時間2(a.m./p.m.)" --after='YYYY-MM' => 查詢某日之後特定時段的commit
+
+git rm 檔名 => 取消commit後的檔案
+
+git commit --amend -m "訊息" => 改變最後一次commit的訊息(僅限最後一次)
+git commit --amend --no-edit => 加入檔案到最後一次commit
+
+git reset 序號 => 取消該序號之前的commit(搭配git log --oneline使用)
+
+git blame 檔名 => 檢視該檔案commit紀錄
+git blame -L 第N行,第M行 檔名 => 檢視該檔案特定行數的commit紀錄
+
+git checkout 檔名 => 取消刪除特定檔案
+git checkout . => 取消刪除所有檔案
+git checkout 分支名 => 切換分支
+git checkout -b 新分支名 => 創建並切換至該分支
+
+git branch => 查看分支
+git branch 分支名 => 開分支 
+git branch -m 原分支名 修改分支名 => 更改分支名
+git branch -d 分支名 => 刪除分支
+git branch -D 分支名 => 強制刪除未合併分支
+
+git merge 分支名 => 合併分支
+
+
+
+
+*上傳檔案到gitHub
+    git add 檔名 -->  git commit -m "說明文字" --> git push
+
+*查看暫存區track(Staged Changes)與Untracked(Changes)檔案
+    git status
+
+*查看commit序號
+    git log --oneline
+
+*取消檔案的commit
+    git reset 序號
+
+*改變commit後的訊息 
+    git reset 序號 -> 重新上傳
+    git commit --amend -m "訊息" => 改變最後一次commit的訊息(僅限最後一次)
+    
+*新增空目錄讓git控制
+    在新增的目錄內增加.gitkeep檔
+
+*取消git對特定檔案的版本控制
+    新增.gitignore檔 -> 輸入不要被版本控制的檔案
+
+*檢視特定檔案中的程式碼段落的commit
+    git blame 檔名
+    git blame -L 第N行,第M行 檔名
+
+*取消刪除檔案
+    git checkout 檔名 => 取消刪除特定檔案
+    git checkout . => 取消刪除所有檔案
+
+*查看分支
+    git branch
+
+*新增分支
+    git branch 分支名
+
+*改名分支
+    git branch -m 原分支名 修改分支名
+
+*刪除分支
+    git branch -d 分支名 => 刪除分支
+    git branch -D 分支名 => 強制刪除未合併分支
+
+*切換分支
+    git checkout 分支名 => 切換分支
+
+*合併分支
+    git checkout 分支A --> git merge 分支B => 合併分支B到分支A
