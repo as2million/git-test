@@ -47,7 +47,7 @@ git merge 分支名 => 合併分支
 
 
 
-*push之前一定要先pull
+*push之前一定要先pull 
 
 *上傳檔案到gitHub
     git add 檔名 -->  git commit -m "說明文字" --> git push
