@@ -46,6 +46,7 @@ git branch -D 分支名 => 強制刪除未合併分支
 git merge 分支名 => 合併分支
 
 
+
 *push之前一定要先pull
 
 *上傳檔案到gitHub
