@@ -96,4 +96,4 @@ git merge 分支名 => 合併分支
     git checkout 分支名 => 切換分支
 
 *合併分支
-    git checkout 分支A --> git merge 分支B => 合併分支B到分支A
+    在分支B push檔案 => git checkout 分支A --> git merge 分支B => 合併分支B到分支A
