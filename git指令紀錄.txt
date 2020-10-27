@@ -36,6 +36,8 @@ git checkout 檔名 => 取消刪除特定檔案
 git checkout . => 取消刪除所有檔案
 git checkout 分支名 => 切換分支
 git checkout -b 新分支名 => 創建並切換至該分支
+git checkout --ours . => 全部衝突使用current
+git checkout --theirs . => 全部衝突使用incomming
 
 git branch => 查看分支
 git branch 分支名 => 開分支 
@@ -44,6 +46,7 @@ git branch -d 分支名 => 刪除分支
 git branch -D 分支名 => 強制刪除未合併分支
 
 git merge 分支名 => 合併分支
+
 
 
 
@@ -97,3 +100,9 @@ git merge 分支名 => 合併分支
 
 *合併分支
     在分支B push檔案 => git checkout 分支A --> git merge 分支B => 合併分支B到分支A
+
+*全部衝突使用current
+    git checkout --ours .
+
+*全部衝突使用incomming
+    git checkout --theirs .
